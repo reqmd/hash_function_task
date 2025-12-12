@@ -75,12 +75,10 @@ class HashTable:
         """
         bucket_sizes = [len(bucket) for bucket in self.table]
         variance = np.var(bucket_sizes)
-        std_dev = np.std(bucket_sizes)
 
         return {
             "bucket_sizes": bucket_sizes,
-            "variance": variance,
-            "standard_deviation": std_dev
+            "metric": variance,
         }
     def __str__(self):
         """Строковое представление хэш-таблицы для удобства отладки."""
