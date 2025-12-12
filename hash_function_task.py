@@ -8,7 +8,7 @@ class HashTable:
         self.table = [[] for _ in range(size)]
 
     def _hash_function(self, key):
-        """Хэш-функция на основе SHA-256."""
+        """Простейшая хэш функция деления"""
         return sum(ord(char) for char in str(key)) % self.size
 
 
